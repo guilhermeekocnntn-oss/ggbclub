@@ -3,6 +3,7 @@ import { motion, useScroll, useTransform } from "motion/react";
 import { useRef, useState } from "react";
 
 const IMG = {
+  logo: "/brand/logo.webp",
   product1: "/brand/product1.webp",
   product2: "/brand/product2.webp",
   slide1: "/brand/slide1.webp",
@@ -52,9 +53,12 @@ function Index() {
 /* ---------- LOGO ---------- */
 function Logo({ className = "" }: { className?: string }) {
   return (
-    <div className={`font-display leading-[0.85] ${className}`}>
-      <div className="text-pink">GGB</div>
-      <div className="text-green">CLUB</div>
+    <div className={`flex items-center ${className}`}>
+      <img
+        src={IMG.logo}
+        alt="GGB Club"
+        className="h-8 md:h-10 w-auto object-contain"
+      />
     </div>
   );
 }
@@ -63,7 +67,7 @@ function Logo({ className = "" }: { className?: string }) {
 function Nav() {
   return (
     <header className="fixed top-0 inset-x-0 z-50 px-5 md:px-10 py-3 flex items-center justify-between bg-yellow border-b-2 border-black">
-      <a href="#top"><Logo className="text-2xl md:text-3xl" /></a>
+      <a href="#top"><Logo /></a>
       <nav className="hidden md:flex gap-8 text-sm font-bold uppercase tracking-wider">
         <a href="#beneficios" className="hover:text-pink transition">Benefícios</a>
         <a href="#ritual" className="hover:text-pink transition">Ritual</a>
@@ -333,175 +337,34 @@ function Ingredients() {
       <div className="text-center mb-14">
         <p className="text-xs uppercase tracking-[0.3em] font-black text-blue mb-3">A fórmula</p>
         <h2 className="font-display text-5xl md:text-8xl leading-[0.9]">
-          <span className="text-pink">Ciência</span> <span className="text-green">com</span> <span className="text-blue">personalidade.</span>
-        </h2>
-      </div>
-      <div className="grid md:grid-cols-2 gap-12 items-center">
-        <div className="relative order-2 md:order-1">
-          <div className="absolute inset-3 bg-yellow rounded-[2rem] rotate-2" />
-          <img
-            src={IMG.slide3}
-            alt="Creme Clareador GGB Club"
-            loading="lazy"
-            className="relative w-full rounded-[2rem] border-4 border-black object-cover"
-          />
-        </div>
-        <div className="order-1 md:order-2 space-y-4">
-          {list.map((ing, i) => (
-            <motion.div
-              key={ing.name}
-              initial={{ opacity: 0, x: 20 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: i * 0.08 }}
-              className="flex items-center justify-between gap-4 p-5 bg-white border-2 border-black rounded-2xl shadow-[4px_4px_0_0_black]"
-            >
-              <div className="flex-1">
-                <h3 className="font-display text-2xl md:text-3xl text-blue">{ing.name}</h3>
-                <p className="text-sm text-muted-foreground mt-1">{ing.note}</p>
-              </div>
-              <span className="font-display text-4xl md:text-5xl text-pink">{ing.pct}</span>
-            </motion.div>
-          ))}
-          <motion.div
-            initial={{ opacity: 0, x: 20 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            transition={{ delay: list.length * 0.08 }}
-            className="p-5 bg-yellow border-2 border-black rounded-2xl shadow-[4px_4px_0_0_black] flex items-center gap-4"
-          >
-            <span className="text-3xl">🛡️</span>
-            <div>
-              <h3 className="font-display text-xl text-blue uppercase tracking-wide">Segurança & Qualidade</h3>
-              <p className="text-sm text-blue font-bold mt-0.5">Testado ginecologicamente e aprovado pela ANVISA.</p>
-            </div>
-          </motion.div>
-        </div>
-      </div>
-    </section>
-  );
-}
+          Para integrar a logo original de forma profissional no seu site, o ideal é seguir boas práticas de organização de arquivos, escolha de formato e estruturação do código. 
 
-/* ---------- TESTIMONIALS ---------- */
-function Testimonials() {
-  const quotes = [
-    { q: "ESSE CREME FAZ MILAGRESSSSS!", a: "Bianca", tag: "cliente verificada", color: "bg-pink text-white" },
-    { q: "Ele REALMENTE clareia. Já usei creme famoso e não vi o resultado que estou vendo com esse. MARAVILHOSO!!", a: "Rafa", color: "bg-green text-white" },
-    { q: "Melhor investimento. Minha pele agradece todo dia.", a: "Jéssica", color: "bg-yellow text-blue" },
-    { q: "Chegou rápido e a textura é tudo. Virei fã.", a: "Larissa", color: "bg-blue text-yellow" },
-  ];
-  return (
-    <section id="depoimentos" className="py-20 md:py-32 px-5 md:px-10 bg-white">
-      <div className="max-w-7xl mx-auto">
-        <div className="flex items-end justify-between mb-12 flex-wrap gap-6">
-          <h2 className="font-display text-5xl md:text-8xl leading-[0.9]">
-            <span className="text-pink">O clube</span> <span className="text-green">fala.</span>
-          </h2>
-          <p className="text-sm uppercase tracking-widest font-black text-blue">★★★★★ · 4.9/5 · 2.847 avaliações</p>
-        </div>
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
-          {quotes.map((qt, i) => (
-            <motion.figure
-              key={i}
-              initial={{ opacity: 0, y: 30, rotate: 0 }}
-              whileInView={{ opacity: 1, y: 0, rotate: i % 2 === 0 ? -1.5 : 1.5 }}
-              viewport={{ once: true }}
-              transition={{ delay: i * 0.1 }}
-              whileHover={{ rotate: 0, scale: 1.03 }}
-              className={`${qt.color} p-7 rounded-[2rem] border-4 border-black shadow-[6px_6px_0_0_black] flex flex-col justify-between min-h-[260px]`}
-            >
-              <blockquote className="font-display text-2xl md:text-3xl leading-[1.05]">"{qt.q}"</blockquote>
-              <figcaption className="text-xs uppercase tracking-widest mt-5 opacity-90 font-bold">— {qt.a}{qt.tag ? ` · ${qt.tag}` : ""}</figcaption>
-            </motion.figure>
-          ))}
-        </div>
-      </div>
-    </section>
-  );
-}
+---
 
-/* ---------- MANIFESTO ---------- */
-function Manifesto() {
-  const words = "Amiga, eu cheguei para ser a sua best.".split(" ");
-  return (
-    <section className="py-24 md:py-40 px-5 md:px-10 bg-yellow text-blue text-center relative overflow-hidden border-y-4 border-black">
-      <Sticker className="top-10 left-10 text-pink text-8xl animate-wobble">✿</Sticker>
-      <Sticker className="bottom-10 right-10 text-green text-8xl animate-wobble">☀</Sticker>
-      <div className="relative max-w-5xl mx-auto">
-        <p className="text-xs uppercase tracking-[0.3em] font-black mb-6 text-pink">Manifesto</p>
-        <h2 className="font-display text-5xl md:text-8xl leading-[0.9] flex flex-wrap justify-center gap-x-4 gap-y-2">
-          {words.map((w, i) => (
-            <motion.span
-              key={i}
-              initial={{ opacity: 0, y: 40 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: "-100px" }}
-              transition={{ delay: i * 0.08 }}
-              className={i === 4 ? "text-pink" : i === 6 ? "text-green" : ""}
-            >
-              {w}
-            </motion.span>
-          ))}
-        </h2>
-        <p className="mt-8 text-lg md:text-xl max-w-2xl mx-auto font-bold">
-          E você também não será. GGB Club não é só skincare — é movimento, é rede, é lembrar todo dia que sua pele e sua vida pertencem a você.
-        </p>
-      </div>
-    </section>
-  );
-}
+## 1. Escolha do Formato Ideal
+* **SVG (Altamente Recomendado):** Sendo um formato vetorial, ele não perde qualidade independentemente do zoom ou da resolução da tela (como monitores 4K ou celulares) e costuma ter um arquivo extremamente leve.
+* **PNG (Com Fundo Transparente):** Utilize caso você só possua a imagem em mapa de bits. Certifique-se de que o fundo esteja recortado (transparente) para evitar caixas brancas ou pretas ao redor da logo.
 
-/* ---------- CTA ---------- */
-function CTA() {
-  return (
-    <section id="comprar" className="py-20 md:py-32 px-5 md:px-10 max-w-6xl mx-auto">
-      <div className="relative bg-pink text-white rounded-[2.5rem] border-4 border-black p-8 md:p-16 overflow-hidden shadow-[12px_12px_0_0_var(--brand-blue)]">
-        <Sticker className="top-6 right-8 text-yellow text-6xl animate-wobble">☀</Sticker>
-        <Sticker className="bottom-6 left-8 text-green text-6xl animate-wobble">✿</Sticker>
-        <div className="relative grid md:grid-cols-2 gap-10 items-center">
-          <div>
-            <p className="text-xs uppercase tracking-[0.3em] font-black text-yellow mb-3">Bem-vinda ao clube</p>
-            <h2 className="font-display text-5xl md:text-7xl leading-[0.85]">
-              Seu <span className="text-yellow">glow</span><br /> tá esperando.
-            </h2>
-            <p className="mt-5 text-base md:text-lg opacity-90 max-w-md">
-              Envio pra todo Brasil · Parcelamento sem juros · Garantia de amor à primeira aplicação.
-            </p>
-          </div>
-          <div className="bg-white text-blue rounded-[2rem] border-4 border-black p-7 shadow-[6px_6px_0_0_black]">
-            <img src={IMG.product2} alt="Creme Clareador GGB Club 150g" className="w-full rounded-2xl mb-4 aspect-square object-cover" loading="lazy" />
-            <p className="text-xs uppercase tracking-widest font-black opacity-70">Creme Clareador · 150g</p>
-            <div className="flex items-baseline gap-3 mt-1">
-              <span className="font-display text-5xl text-pink">R$ 89</span>
-              <span className="text-lg line-through opacity-40">R$ 129</span>
-            </div>
-            <p className="text-sm mt-1 font-black text-green">ou 3x de R$ 29,67 sem juros</p>
-            <a href="https://www.ggbclub.com.br/produtos/creme-clareador/" className="mt-5 block w-full py-4 rounded-full bg-pink text-white text-center font-black uppercase tracking-widest shadow-[0_6px_0_0_var(--brand-blue)] hover:translate-y-1 hover:shadow-[0_2px_0_0_var(--brand-blue)] transition-all">
-              Comprar agora ✿
-            </a>
-            <p className="text-xs text-center mt-3 opacity-60 font-bold">✓ Frete grátis acima de R$ 150</p>
-          </div>
-        </div>
-      </div>
-    </section>
-  );
-}
+---
 
-/* ---------- FOOTER ---------- */
-function Footer() {
-  return (
-    <footer className="border-t-4 border-black py-12 px-5 md:px-10 bg-white">
-      <div className="max-w-7xl mx-auto flex flex-wrap items-center justify-between gap-6">
-        <div>
-          <Logo className="text-3xl" />
-          <p className="text-sm text-muted-foreground mt-2 font-bold">© {new Date().getFullYear()} GGB Club · Gata Garota</p>
-        </div>
-        <div className="flex gap-6 text-xs uppercase tracking-widest font-black text-blue">
-          <a href="https://www.instagram.com/ggbclub.Oficial" className="hover:text-pink">Instagram</a>
-          <a href="#" className="hover:text-pink">TikTok</a>
-          <a href="#" className="hover:text-pink">Contato</a>
-        </div>
-      </div>
-    </footer>
-  );
-}
+## 2. Onde Salvar a Imagem
+A organização correta facilita a manutenção do código. No diretório raiz do seu projeto web, siga esta estrutura de pastas:
+
+1. Crie uma pasta chamada **`assets`** (ou `public`).
+2. Dentro dela, crie uma subpasta chamada **`img`** (ou `images`).
+3. Salve o arquivo da logo com um nome limpo, sem espaços ou caracteres especiais (ex: `stark-logo.svg` ou `logo.png`).
+
+O caminho final para uso no código será `assets/img/stark-logo.svg`.
+
+---
+
+## 3. Código de Exemplo (HTML e CSS)
+
+Aqui está um exemplo padrão e responsivo para estruturar a logo no cabeçalho (*header*) do site:
+
+```html
+<header class="site-header">
+  <a href="#" class="logo-container">
+    <img src="assets/img/stark-logo.svg" alt="Logo Oficial" class="logo-image">
+  </a>
+</header>

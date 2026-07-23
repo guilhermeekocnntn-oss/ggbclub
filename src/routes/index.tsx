@@ -62,7 +62,7 @@ function Logo({ className = "" }: { className?: string }) {
 /* ---------- NAV ---------- */
 function Nav() {
   return (
-    <header className="fixed top-0 inset-x-0 z-50 px-5 md:px-10 py-3 flex items-center justify-between backdrop-blur-md bg-white/75 border-b-2 border-black/5">
+    <header className="fixed top-0 inset-x-0 z-50 px-5 md:px-10 py-3 flex items-center justify-between bg-yellow border-b-2 border-black">
       <a href="#top"><Logo className="text-2xl md:text-3xl" /></a>
       <nav className="hidden md:flex gap-8 text-sm font-bold uppercase tracking-wider">
         <a href="#beneficios" className="hover:text-pink transition">Benefícios</a>
@@ -163,13 +163,13 @@ function Hero() {
               <defs>
                 <path id="circ" d="M 50,50 m -37,0 a 37,37 0 1,1 74,0 a 37,37 0 1,1 -74,0" />
               </defs>
-              <circle cx="50" cy="50" r="48" fill="var(--brand-blue)" />
-              <text fontSize="9" fill="var(--brand-yellow)" fontFamily="var(--font-display)" letterSpacing="1">
+              <circle cx="50" cy="50" r="48" fill="var(--brand-yellow)" />
+              <text fontSize="9" fill="var(--brand-blue)" fontFamily="var(--font-display)" letterSpacing="1">
                 <textPath href="#circ">✿ GATA GAROTA ✿ GGB CLUB </textPath>
               </text>
             </svg>
             <div className="absolute inset-0 flex items-center justify-center">
-              <span className="text-4xl md:text-5xl">✿</span>
+              <span className="text-4xl md:text-5xl text-blue">✿</span>
             </div>
           </div>
           {/* Price tag */}

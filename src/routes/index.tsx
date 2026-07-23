@@ -84,13 +84,13 @@ function Hero() {
   const yImg = useTransform(scrollYProgress, [0, 1], [0, 180]);
 
   return (
-    <section id="top" ref={ref} className="relative min-h-screen pt-24 pb-16 px-5 md:px-10 flex items-center bg-white">
+    <section id="top" ref={ref} className="relative min-h-screen pt-32 pb-16 px-5 md:px-10 flex items-center bg-white">
       {/* Confetti stickers */}
-      <Sticker className="top-24 left-6 text-yellow text-6xl md:text-8xl animate-wobble" style={{ animationDelay: "0.2s" }}>✿</Sticker>
-      <Sticker className="top-40 right-10 text-blue text-5xl md:text-7xl animate-wobble">☀</Sticker>
+      <Sticker className="top-32 left-6 text-yellow text-6xl md:text-8xl animate-wobble" style={{ animationDelay: "0.2s" }}>✿</Sticker>
+      <Sticker className="top-44 right-10 text-blue text-5xl md:text-7xl animate-wobble">☀</Sticker>
       <Sticker className="bottom-24 left-16 text-pink text-6xl md:text-7xl animate-wobble" style={{ animationDelay: "0.5s" }}>♥</Sticker>
       <Sticker className="bottom-40 right-24 text-green text-5xl md:text-6xl animate-wobble" style={{ animationDelay: "0.8s" }}>≈</Sticker>
-      <Squiggle className="top-32 left-1/2 text-blue" />
+      <Squiggle className="top-36 left-1/2 text-blue" />
 
       <div className="relative z-10 max-w-7xl mx-auto grid md:grid-cols-2 gap-8 items-center w-full">
         <div>
@@ -145,7 +145,7 @@ function Hero() {
         </div>
 
         {/* Product image with sticker-like frame */}
-        <motion.div style={{ y: yImg }} className="relative animate-bounce-soft">
+        <motion.div style={{ y: yImg }} className="relative animate-bounce-soft mt-6 md:mt-0">
           <div className="absolute inset-4 bg-yellow rounded-[3rem] rotate-3" />
           <div className="absolute inset-4 bg-green rounded-[3rem] -rotate-3" />
           <div className="relative bg-pink rounded-[3rem] p-6 md:p-10 border-4 border-black shadow-[12px_12px_0_0_var(--brand-blue)]">
@@ -158,7 +158,7 @@ function Hero() {
             />
           </div>
           {/* Spinning badge */}
-          <div className="absolute -top-8 -right-4 md:-top-10 md:-right-10 w-28 h-28 md:w-36 md:h-36 z-20">
+          <div className="absolute -top-8 -right-4 md:-top-10 md:-right-10 w-28 h-28 md:w-36 md:h-36 z-25">
             <svg viewBox="0 0 100 100" className="animate-spin-slow w-full h-full">
               <defs>
                 <path id="circ" d="M 50,50 m -37,0 a 37,37 0 1,1 74,0 a 37,37 0 1,1 -74,0" />

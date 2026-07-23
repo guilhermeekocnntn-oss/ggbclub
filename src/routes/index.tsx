@@ -164,8 +164,8 @@ function Hero() {
                 <path id="circ" d="M 50,50 m -37,0 a 37,37 0 1,1 74,0 a 37,37 0 1,1 -74,0" />
               </defs>
               <circle cx="50" cy="50" r="48" fill="var(--brand-yellow)" />
-              <text fontSize="9" fill="var(--brand-blue)" fontFamily="var(--font-display)" letterSpacing="1">
-                <textPath href="#circ">✿ GATA GAROTA ✿ GGB CLUB </textPath>
+              <text fontSize="7.5" fill="var(--brand-blue)" fontFamily="var(--font-display)" letterSpacing="0.5">
+                <textPath href="#circ">✿ PRODUTO APROVADO PELA ANVISA ✿ GGB CLUB </textPath>
               </text>
             </svg>
             <div className="absolute inset-0 flex items-center justify-center">
@@ -173,9 +173,9 @@ function Hero() {
             </div>
           </div>
           {/* Price tag */}
-          <div className="absolute -bottom-6 -left-4 md:-left-8 bg-yellow border-2 border-black rounded-2xl px-5 py-3 -rotate-6 shadow-[4px_4px_0_0_black] max-w-[210px]">
-            <div className="text-[9px] uppercase tracking-widest font-black text-blue leading-tight">Produto testado e aprovado pela ANVISA</div>
-            <div className="font-display text-3xl text-pink leading-none mt-1">R$89</div>
+          <div className="absolute -bottom-6 -left-4 md:-left-8 bg-yellow border-2 border-black rounded-2xl px-5 py-3 -rotate-6 shadow-[4px_4px_0_0_black]">
+            <div className="text-[10px] uppercase tracking-widest font-black text-blue">A partir de</div>
+            <div className="font-display text-3xl text-pink leading-none">R$89</div>
           </div>
         </motion.div>
       </div>

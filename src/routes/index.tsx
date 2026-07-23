@@ -173,9 +173,9 @@ function Hero() {
             </div>
           </div>
           {/* Price tag */}
-          <div className="absolute -bottom-6 -left-4 md:-left-8 bg-yellow border-2 border-black rounded-2xl px-5 py-3 -rotate-6 shadow-[4px_4px_0_0_black]">
-            <div className="text-[10px] uppercase tracking-widest font-black text-blue">A partir de</div>
-            <div className="font-display text-3xl text-pink leading-none">R$89</div>
+          <div className="absolute -bottom-6 -left-4 md:-left-8 bg-yellow border-2 border-black rounded-2xl px-5 py-3 -rotate-6 shadow-[4px_4px_0_0_black] max-w-[210px]">
+            <div className="text-[9px] uppercase tracking-widest font-black text-blue leading-tight">Produto testado e aprovado pela ANVISA</div>
+            <div className="font-display text-3xl text-pink leading-none mt-1">R$89</div>
           </div>
         </motion.div>
       </div>
@@ -232,7 +232,7 @@ function Benefits() {
     { icon: "☀", t: "Clareia manchas", d: "Ácido tranexâmico focado em hiperpigmentação. Some com marca teimosa.", bg: "bg-pink", text: "text-white" },
     { icon: "✿", t: "Uniformiza o tom", d: "Niacinamida iguala o tom, controla oleosidade e fortalece a pele.", bg: "bg-green", text: "text-white" },
     { icon: "♥", t: "Textura seda", d: "Absorção rápida, zero pegajoso. Passou, esqueceu, brilhou.", bg: "bg-yellow", text: "text-blue" },
-    { icon: "★", t: "Dermatologicamente testado", d: "Feito pra pele brasileira. Vegano, cruelty-free, sem parabenos.", bg: "bg-blue", text: "text-yellow" },
+    { icon: "★", t: "Ginecologicamente testado", d: "Feito pra pele brasileira. Vegano, cruelty-free, sem parabenos.", bg: "bg-blue", text: "text-yellow" },
   ];
   return (
     <section id="beneficios" className="relative py-20 md:py-32 px-5 md:px-10 max-w-7xl mx-auto">

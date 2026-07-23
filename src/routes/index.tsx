@@ -260,7 +260,7 @@ function Benefits() {
             className={`${it.bg} ${it.text} p-7 rounded-[2rem] border-4 border-black shadow-[6px_6px_0_0_black] hover:translate-y-[-4px] hover:shadow-[6px_10px_0_0_black] transition-all`}
           >
             <div className="text-5xl mb-4">{it.icon}</div>
-            <h3 className="font-display text-3xl mb-2">{it.t}</h3>
+            <h3 className="font-display text-2xl md:text-3xl mb-2 break-words">{it.t}</h3>
             <p className="text-sm opacity-90 leading-relaxed">{it.d}</p>
           </motion.div>
         ))}

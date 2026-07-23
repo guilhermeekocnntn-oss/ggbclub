@@ -3,7 +3,7 @@ import { motion, useScroll, useTransform } from "motion/react";
 import { useRef, useState } from "react";
 
 const IMG = {
-  logo: "/brand/logo.webp",
+  logo: "/brand/logo.webp", // Altere para ".png" ou ".svg" caso sua logo use outra extensão
   product1: "/brand/product1.webp",
   product2: "/brand/product2.webp",
   slide1: "/brand/slide1.webp",
@@ -105,7 +105,7 @@ function Hero() {
             transition={{ type: "spring", stiffness: 200, damping: 12 }}
             className="inline-block px-4 py-2 rounded-full bg-yellow border-2 border-black text-blue text-xs uppercase tracking-widest font-black mb-6"
           >
-            ✿ Novo · Gata Garota Edition ✿
+            ✿ Novo · GGB Club Edition ✿
           </motion.div>
 
           <h1 className="font-display text-[clamp(3.5rem,10vw,8rem)] leading-[0.85] tracking-tight">

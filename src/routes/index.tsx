@@ -363,6 +363,19 @@ function Ingredients() {
               <span className="font-display text-4xl md:text-5xl text-pink">{ing.pct}</span>
             </motion.div>
           ))}
+          <motion.div
+            initial={{ opacity: 0, x: 20 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ delay: list.length * 0.08 }}
+            className="p-5 bg-yellow border-2 border-black rounded-2xl shadow-[4px_4px_0_0_black] flex items-center gap-4"
+          >
+            <span className="text-3xl">🛡️</span>
+            <div>
+              <h3 className="font-display text-xl text-blue uppercase tracking-wide">Segurança & Qualidade</h3>
+              <p className="text-sm text-blue font-bold mt-0.5">Testado ginecologicamente e aprovado pela ANVISA.</p>
+            </div>
+          </motion.div>
         </div>
       </div>
     </section>

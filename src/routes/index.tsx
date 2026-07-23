@@ -3,7 +3,7 @@ import { motion, useScroll, useTransform } from "motion/react";
 import { useRef, useState } from "react";
 
 const IMG = {
-  logo: "/brand/logo.webp", // Altere para ".png" ou ".svg" caso sua logo use outra extensão
+  logo: "/brand/logo.svg",
   product1: "/brand/product1.webp",
   product2: "/brand/product2.webp",
   slide1: "/brand/slide1.webp",
@@ -24,7 +24,7 @@ export const Route = createFileRoute("/")({
       { name: "twitter:card", content: "summary_large_image" },
     ],
     links: [
-      { rel: "icon", href: "/brand/logo.ico" },
+      { rel: "icon", href: "/brand/logo.svg" },
       { rel: "preconnect", href: "https://fonts.googleapis.com" },
       { rel: "preconnect", href: "https://fonts.gstatic.com", crossOrigin: "anonymous" },
       { rel: "stylesheet", href: "https://fonts.googleapis.com/css2?family=Bagel+Fat+One&family=Space+Grotesk:wght@400;500;700&display=swap" },
@@ -105,7 +105,7 @@ function Hero() {
             transition={{ type: "spring", stiffness: 200, damping: 12 }}
             className="inline-block px-4 py-2 rounded-full bg-yellow border-2 border-black text-blue text-xs uppercase tracking-widest font-black mb-6"
           >
-            ✿ Novo · GGB Club Edition ✿
+            ✿ Novo · Gata Garota Edition ✿
           </motion.div>
 
           <h1 className="font-display text-[clamp(3.5rem,10vw,8rem)] leading-[0.85] tracking-tight">
